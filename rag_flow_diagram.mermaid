@@ -1,0 +1,40 @@
+graph TB
+    subgraph "1. Knowledge Base Building"
+        A[Upload Code/Docs] --> B[Text Splitter<br/>Chunk Documents]
+        B --> C[OpenAI Embeddings<br/>Convert to Vectors]
+        C --> D[FAISS/ChromaDB<br/>Store Vectors]
+        
+        H[Historical Tests] --> B
+        I[Bug Reports] --> B
+        J[API Documentation] --> B
+    end
+    
+    subgraph "2. RAG-Enhanced Test Generation"
+        E[New Code<br/>to Test] --> F[Create Query]
+        F --> G[Vector Search<br/>Similarity Search]
+        D --> G
+        
+        G --> K[Retrieve Top-K<br/>Relevant Docs]
+        K --> L[Similar Tests<br/>+API Docs<br/>+Bug Patterns]
+    end
+    
+    subgraph "3. AI Generation with Context"
+        L --> M[LangChain<br/>Prompt Template]
+        E --> M
+        M --> N[GPT-4<br/>with Context]
+        N --> O[Generated<br/>Test Cases]
+    end
+    
+    subgraph "4. Feedback Loop"
+        O --> P[Execute Tests]
+        P --> Q{Test Result}
+        Q -->|Success| R[Add to<br/>Knowledge Base]
+        Q -->|Failure| S[Bug Report]
+        S --> R
+        R --> D
+    end
+    
+    style D fill:#4CAF50,color:#fff
+    style N fill:#2196F3,color:#fff
+    style O fill:#FF9800,color:#fff
+    style R fill:#9C27B0,color:#fff

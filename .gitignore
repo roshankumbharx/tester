@@ -1,0 +1,129 @@
+# ============================
+# 🐍 PYTHON / FASTAPI BACKEND
+# ============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py.class
+*.egg-info/
+.eggs/
+.env
+venv/
+ENV/
+env/
+*.log
+logs/
+*.sqlite3
+instance/
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
+dist/
+build/
+.cache/
+*.db
+db.sqlite3
+
+# Ignore test result files
+backend/tests/results/
+backend/tests/screenshots/
+backend/logs/
+*.json
+
+# ============================
+# 🧠 AI / ML / RAG COMPONENTS
+# ============================
+# Vector stores (FAISS/ChromaDB)
+backend/rag/embeddings/vector_store/
+backend/rag/embeddings/*.pkl
+backend/rag/embeddings/*.bin
+backend/rag/embeddings/*.faiss
+
+# Indexed docs
+backend/rag/docs/*.pdf
+backend/rag/docs/*.docx
+
+# Model weights or checkpoints
+*.h5
+*.pt
+*.ckpt
+*.onnx
+*.model
+
+# ============================
+# 🐳 DOCKER & ENV FILES
+# ============================
+docker/*.log
+docker/*.pid
+docker/.env
+*.pid
+*.tar
+*.gz
+.env
+.env.local
+.env.production
+.env.development
+
+# ============================
+# ⚛️ FRONTEND (React)
+# ============================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.DS_Store
+
+# ============================
+# 📦 SYSTEM / OS FILES
+# ============================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+*~
+*.log
+.idea/
+.vscode/
+*.iml
+__MACOSX/
+
+# ============================
+# 🧾 DOCUMENTATION / OUTPUTS
+# ============================
+docs/ppt/*.pptx
+docs/paper_draft.docx
+docs/*.pdf
+docs/*.docx
+*.pptx
+*.pdf
+*.zip
+
+# ============================
+# ⚙️ JIRA / API KEYS
+# ============================
+# Do NOT commit credentials
+jira_credentials.json
+api_keys.json
+secrets.json
+backend/api/keys/
+backend/api/secret_config/
+
+# ============================
+# 🔧 MISC
+# ============================
+*.bak
+*.orig
+*.rej
+*.tmp
+*.out
+*.old
+*.save
+*.retry
